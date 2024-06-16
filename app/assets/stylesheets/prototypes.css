@@ -1,0 +1,15 @@
+.logo-image {
+  width: 100%;   
+  height: auto;  
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+h1 {
+  font-family: 'Sacramento', cursive;
+  font-size: 70px;
+}
+
+p { 
+  font-family: TsukuARdGothic-Regular;
+}
