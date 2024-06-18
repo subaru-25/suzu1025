@@ -1,0 +1,11 @@
+<h1>レシピ一覧</h1>
+
+<%= link_to '新しいレシピを作成', new_recipe_path, class: 'btn btn-primary mb-3' %>
+
+<ul>
+  <% @recipes.each do |recipe| %>
+    <li>
+      <%= link_to recipe.title, recipe_path(recipe) %>
+    </li>
+  <% end %>
+</ul>

@@ -1,16 +1,34 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Suzu1025</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>レシピ共有アプリ</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= stylesheet_link_tag 'styles', media: 'all' %>  <!-- ここでstyles.cssをリンク -->
+</head>
+<body>
+  <header>
+    <h1>レシピ共有アプリ</h1>
+    <nav>
+      <ul>
+        <li><%= link_to 'ホーム', root_path %></li>
+        <li><%= link_to 'レシピ一覧', recipes_path %></li>
+        <li><%= link_to '新しいレシピを投稿', new_recipe_path %></li>
+        <li><%= link_to 'ログイン', login_path %></li>
+        <li><%= link_to 'サインアップ', signup_path %></li>
+      </ul>
+    </nav>
+  </header>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
-
-  <body>
+  <main>
     <%= yield %>
-  </body>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 レシピ共有アプリ</p>
+  </footer>
+</body>
 </html>
